@@ -716,7 +716,7 @@ rxFactory = (_, _str, $) ->
 
     rxt.mkAtts = mkAtts = (attstr) ->
       do(atts = {}) ->
-        match = attstr.match /[#](\w+)/
+        match = attstr.match /#([A-Za-z][A-Za-z0-9_:.\-]+)/
         atts.id = match[1] if match
         atts.class = (cls.replace(/^\./, '') for cls in attstr.match(/\.\w+/g)).join(' ')
         atts
