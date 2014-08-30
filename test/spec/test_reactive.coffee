@@ -50,7 +50,7 @@ describe 'tag', ->
         rxt.tags.button ['click me']
       ]
     it 'should have the right tag', ->
-      expect(elt.is('header')).toBe(true)
+      expect(elt.is('header')).toBe(false)
     it 'should have the set attributes', ->
       expect(elt.prop('class')).toBe('my-class')
       expect(elt.attr('style')).toBe('font-size: 10px')
